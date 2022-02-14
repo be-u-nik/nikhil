@@ -1,5 +1,5 @@
 import "./App.css";
-import { FaFacebookF, FaHome } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 function App() {
   return (
     <div className="App">
