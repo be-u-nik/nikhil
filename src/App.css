@@ -99,7 +99,6 @@ body {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .tooltip-left::before {
-  right: 0px;
   left: 0px;
   transform: translate(50%);
 }
@@ -187,18 +186,12 @@ p {
   color: white;
   width: 100vw;
   padding: 0;
+  overflow: hidden;
   /* height: 100vw; */
 }
-.logo {
-  width: 50px;
-  fill: white;
-  padding-right: 15px;
-  display: inline-block;
-  vertical-align: middle;
-}
 
-.inner {
-  height: 70vh;
+.inner__container {
+  height: 80vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -269,4 +262,32 @@ p {
   h1 {
     font-size: 24px;
   }
+}
+
+/* slides */
+
+.content {
+  scroll-snap-type: y mandatory;
+  display: block;
+  height: 80vh;
+  overflow-y: scroll;
+}
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+section:nth-of-type(even) {
+  color: white;
+  background: black;
+}
+
+section:nth-of-type(odd) {
+  color: black;
+  background: white;
 }

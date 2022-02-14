@@ -56,36 +56,22 @@ function App() {
                 </div>
               </div>
 
-              <div className="d-flex flex-1 ">
-                <h1>Portfolio coming soon!! :)</h1>
-              </div>
-
-              {/* icons right*/}
-              <div className="wrapper">
-                <div className="icon facebook">
-                  <div>
-                    <FaHome />
-                  </div>
-                  <div className="tooltip">Facebook</div>
-                </div>
-                <div className="icon twitter">
-                  <div>
-                    <FaHome />
-                  </div>
-                  <div className="tooltip">Twitter</div>
-                </div>
-                <div className="icon instagram">
-                  <div>
-                    <FaHome />
-                  </div>
-                  <div className="tooltip">Instagram</div>
-                </div>
-                <div className="icon github">
-                  <div>
-                    <FaHome />
-                  </div>
-                  <div className="tooltip">Github</div>
-                </div>
+              <div className=" content">
+                <section>
+                  <h1>slide 1</h1>
+                </section>
+                <section>
+                  <h1>slide 2</h1>
+                </section>
+                <section>
+                  <h1>slide 3</h1>
+                </section>
+                <section>
+                  <h1>slide 4</h1>
+                </section>
+                <section>
+                  <h1>slide 5</h1>
+                </section>
               </div>
             </div>
             {/* Waves Container */}
