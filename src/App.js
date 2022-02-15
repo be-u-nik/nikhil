@@ -8,10 +8,7 @@ function App() {
           <div className="col-12">
             {/* waves */}
             {/* Content before waves */}
-            <div
-              className="inner__container d-flex flex-column flex-md-row mx-2 align-items-center"
-              style={{ zIndex: "1" }}
-            >
+            <div className="inner__container d-flex flex-column flex-md-row mx-2 align-items-center">
               {/* icons left */}
               <div className="wrapper d-flex flex-md-column justify-content-start justify-content-md-center align-self-start align-self-md-center col-2 col-md-1">
                 <div className="d-md-none menu_item facebook">
