@@ -7,14 +7,6 @@ body {
   background-color: #fff;
 }
 
-/* #canvas {
-  margin: 0 auto;
-  display: block;
-} */
-
-/* icons */
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap"); */
-
 * {
   margin: 0;
   padding: 0;
@@ -27,25 +19,11 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* html,
-body {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  place-items: center;
-  background: linear-gradient(315deg, #ffffff, #d7e1ec);
-} */
-/* .container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-} */
 .inner__container {
   justify-content: center;
   margin-top: 5vh;
   height: 80vh;
-  width: 100%;
+  /* width: 100%; */
 }
 .wrapper .menu_item {
   position: relative;
@@ -151,12 +129,16 @@ body {
   color: #ffffff;
 }
 
+#menu_items {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+#menu_items::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
 /* waves */
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
-
-body {
-  margin: 0;
-}
 
 h1 {
   font-family: "Lato", sans-serif;
@@ -174,17 +156,15 @@ p {
 .outer {
   position: relative;
   text-align: center;
-  /* background: linear-gradient(
+  background: linear-gradient(
     60deg,
     rgba(84, 58, 183, 1) 0%,
     rgba(0, 172, 193, 1) 100%
-  ); */
-  background-color: black;
+  );
   color: white;
   width: 100vw;
   padding: 0;
   overflow: hidden;
-  /* height: 100vw; */
 }
 
 .flex {
@@ -199,16 +179,15 @@ p {
   position: relative;
   width: 100%;
   height: 15vh;
-  margin-bottom: -7px; /*Fix for safari gap*/
+  margin-bottom: -7px;
   min-height: 100px;
   max-height: 150px;
 }
 
 .content {
   position: relative;
-  /* height: 20vh; */
   text-align: center;
-  background-color: white;
+  background-color: transparent;
 }
 
 /* Animation */
@@ -279,5 +258,5 @@ section {
 
 section {
   color: black;
-  background: white;
+  background: transparent;
 }

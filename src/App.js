@@ -9,12 +9,11 @@ function App() {
             {/* waves */}
             {/* Content before waves */}
             <div
-              className="inner__container d-flex flex-column flex-md-row mx-2 align-items-center align-items-md-center"
+              className="inner__container d-flex flex-column flex-md-row mx-2 align-items-center"
               style={{ zIndex: "1" }}
             >
-              {/* <canvas id="canvas">Your browser doesn't support canvas</canvas> */}
               {/* icons left */}
-              <div className="wrapper d-flex flex-md-column justify-content-start align-self-start col-2 col-md-1">
+              <div className="wrapper d-flex flex-md-column justify-content-start justify-content-md-center align-self-start align-self-md-center col-2 col-md-1">
                 <div className="d-md-none menu_item facebook">
                   <div
                     className="icon"
@@ -28,55 +27,68 @@ function App() {
                   >
                     <FaHamburger />
                   </div>
-                  {/* <div className="tooltip tooltip-left">Facebook</div> */}
                 </div>
                 <div className="d-none d-md-block" id="menu_items">
                   <div className="menu_item facebook">
                     <div className="icon">
                       <FaHome />
                     </div>
-                    <div className="tooltip tooltip-left">Facebook</div>
+                    <div className="tooltip tooltip-left d-none d-md-block">
+                      Facebook
+                    </div>
                   </div>
                   <div className="menu_item twitter">
                     <div className="icon">
                       <FaHome />
                     </div>
-                    <div className="tooltip tooltip-left">Twitter</div>
+                    <div className="tooltip tooltip-left d-none d-md-block">
+                      Twitter
+                    </div>
                   </div>
                   <div className="menu_item instagram">
                     <div className="icon">
                       <FaHome />
                     </div>
-                    <div className="tooltip tooltip-left">Instagram</div>
+                    <div className="tooltip tooltip-left d-none d-md-block">
+                      Instagram
+                    </div>
                   </div>
                   <div className="menu_item github">
                     <div className="icon">
                       <FaHome />
                     </div>
-                    <div className="tooltip tooltip-left">Github</div>
+                    <div className="tooltip tooltip-left d-none d-md-block">
+                      Github
+                    </div>
                   </div>
                   <div className="menu_item youtube">
                     <div className="icon">
                       <FaHome />
                     </div>
-                    <div className="tooltip tooltip-left">Youtube</div>
+                    <div className="tooltip tooltip-left d-none d-md-block">
+                      Youtube
+                    </div>
                   </div>
                   <div className="menu_item youtube">
                     <div className="icon">
                       <FaHome />
                     </div>
-                    <div className="tooltip tooltip-left">Youtube</div>
+                    <div className="tooltip tooltip-left d-none d-md-block">
+                      Youtube
+                    </div>
                   </div>
                   <div className="menu_item youtube">
                     <div className="icon">
                       <FaHome />
                     </div>
-                    <div className="tooltip tooltip-left">Youtube</div>
+                    <div className="tooltip tooltip-left d-none d-md-block">
+                      Youtube
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="content col-9 col-md-10">
+              <div className="content col-12 col-md-10">
                 <section>
                   <h1>Home</h1>
                 </section>
