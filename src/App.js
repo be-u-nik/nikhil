@@ -1,5 +1,5 @@
 import "./App.css";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaHamburger } from "react-icons/fa";
 function App() {
   return (
     <div className="App">
@@ -8,74 +8,96 @@ function App() {
           <div className="col-12">
             {/* waves */}
             {/* Content before waves */}
-            <div className="inner__container mx-2" style={{ "z-index": "1" }}>
+            <div
+              className="inner__container mx-2 align-items-start align-items-md-center"
+              style={{ zIndex: "1" }}
+            >
               {/* <canvas id="canvas">Your browser doesn't support canvas</canvas> */}
               {/* icons left */}
-              <div className="wrapper">
-                <div className="icon facebook">
-                  <div>
-                    <FaHome />
+              <div className="wrapper d-flex flex-column justify-content-start col-2 col-md-1">
+                <div className="d-md-none menu_item facebook">
+                  <div
+                    className="icon"
+                    onClick={() => {
+                      const menu_items = document.getElementById("menu_items");
+                      menu_items.classList.toggle("d-none");
+                      console.log(menu_items);
+                      console.log("button clicked");
+                    }}
+                  >
+                    <FaHamburger />
                   </div>
-                  <div className="tooltip tooltip-left">Facebook</div>
+                  {/* <div className="tooltip tooltip-left">Facebook</div> */}
                 </div>
-                <div className="icon twitter">
-                  <div>
-                    <FaHome />
+                <div className="d-none d-md-block" id="menu_items">
+                  <div className="menu_item facebook">
+                    <div className="icon">
+                      <FaHome />
+                    </div>
+                    <div className="tooltip tooltip-left">Facebook</div>
                   </div>
-                  <div className="tooltip tooltip-left">Twitter</div>
-                </div>
-                <div className="icon instagram">
-                  <div>
-                    <FaHome />
+                  <div className="menu_item twitter">
+                    <div className="icon">
+                      <FaHome />
+                    </div>
+                    <div className="tooltip tooltip-left">Twitter</div>
                   </div>
-                  <div className="tooltip tooltip-left">Instagram</div>
-                </div>
-                <div className="icon github">
-                  <div>
-                    <FaHome />
+                  <div className="menu_item instagram">
+                    <div className="icon">
+                      <FaHome />
+                    </div>
+                    <div className="tooltip tooltip-left">Instagram</div>
                   </div>
-                  <div className="tooltip tooltip-left">Github</div>
-                </div>
-                <div className="icon youtube">
-                  <div>
-                    <FaHome />
+                  <div className="menu_item github">
+                    <div className="icon">
+                      <FaHome />
+                    </div>
+                    <div className="tooltip tooltip-left">Github</div>
                   </div>
-                  <div className="tooltip tooltip-left">Youtube</div>
-                </div>
-                <div className="icon youtube">
-                  <div>
-                    <FaHome />
+                  <div className="menu_item youtube">
+                    <div className="icon">
+                      <FaHome />
+                    </div>
+                    <div className="tooltip tooltip-left">Youtube</div>
                   </div>
-                  <div className="tooltip tooltip-left">Youtube</div>
-                </div>
-                <div className="icon youtube">
-                  <div>
-                    <FaHome />
+                  <div className="menu_item youtube">
+                    <div className="icon">
+                      <FaHome />
+                    </div>
+                    <div className="tooltip tooltip-left">Youtube</div>
                   </div>
-                  <div className="tooltip tooltip-left">Youtube</div>
+                  <div className="menu_item youtube">
+                    <div className="icon">
+                      <FaHome />
+                    </div>
+                    <div className="tooltip tooltip-left">Youtube</div>
+                  </div>
                 </div>
               </div>
 
-              <div className=" content">
+              <div className="content col-9 col-md-10">
                 <section>
-                  <h1>slide 1</h1>
+                  <h1>Home</h1>
                 </section>
                 <section>
-                  <h1>slide 2</h1>
+                  <h1>About</h1>
                 </section>
                 <section>
-                  <h1>slide 3</h1>
+                  <h1>Resume</h1>
                 </section>
                 <section>
-                  <h1>slide 4</h1>
+                  <h1>Projects</h1>
                 </section>
                 <section>
-                  <h1>slide 5</h1>
+                  <h1>Testimonials</h1>
+                </section>
+                <section>
+                  <h1>Contact me</h1>
                 </section>
               </div>
             </div>
             {/* Waves Container */}
-            <div style={{ "z-index": "0" }}>
+            <div style={{ zIndex: "0" }}>
               <svg
                 className="waves"
                 xmlns="http://www.w3.org/2000/svg"
