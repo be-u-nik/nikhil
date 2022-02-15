@@ -9,18 +9,19 @@ function App() {
             {/* waves */}
             {/* Content before waves */}
             <div
-              className="inner__container mx-2 align-items-start align-items-md-center"
+              className="inner__container d-flex flex-column flex-md-row mx-2 align-items-center align-items-md-center"
               style={{ zIndex: "1" }}
             >
               {/* <canvas id="canvas">Your browser doesn't support canvas</canvas> */}
               {/* icons left */}
-              <div className="wrapper d-flex flex-column justify-content-start col-2 col-md-1">
+              <div className="wrapper d-flex flex-md-column justify-content-start align-self-start col-2 col-md-1">
                 <div className="d-md-none menu_item facebook">
                   <div
                     className="icon"
                     onClick={() => {
                       const menu_items = document.getElementById("menu_items");
                       menu_items.classList.toggle("d-none");
+                      menu_items.classList.toggle("d-flex");
                       console.log(menu_items);
                       console.log("button clicked");
                     }}
