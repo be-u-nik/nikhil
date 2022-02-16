@@ -22,8 +22,9 @@ body {
 .inner__container {
   justify-content: center;
   margin-top: 5vh;
+  padding-top: 10vh;
   height: 80vh;
-  z-index: 1;
+  z-index: 0;
 }
 .wrapper .menu_item {
   position: relative;
@@ -136,6 +137,12 @@ body {
 #menu_items::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+.menu_item_icon {
+  color: #000;
+}
+.menu_item_icon:hover {
+  color: inherit;
+}
 
 /* waves */
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
@@ -156,11 +163,13 @@ p {
 .outer {
   position: relative;
   text-align: center;
-  background: linear-gradient(
+  /* background: linear-gradient(
     60deg,
     rgba(84, 58, 183, 1) 0%,
     rgba(0, 172, 193, 1) 100%
-  );
+  ); */
+  background-color: black;
+  background-size: cover;
   color: white;
   width: 100vw;
   padding: 0;
@@ -249,14 +258,34 @@ p {
 section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
   height: 100%;
+  overflow-x: visible;
+  color: #ffffff;
+  background: transparent;
+  /* border: 1px dashed #ffffff; */
+}
+@media (min-width: 992px) {
+  section {
+    padding-left: 5vw;
+    padding-top: 10vh;
+  }
 }
 
-section {
-  color: black;
-  background: transparent;
+/* home content */
+.home__image {
+  width: 403px;
+  border: 2px solid yellow;
+}
+@media (max-width: 992px) {
+  .home__image {
+    width: 304px;
+    height: 304px;
+    border: 2px solid yellow;
+  }
+  .home__image img {
+    width: 300px;
+    height: 300px;
+  }
 }
