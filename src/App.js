@@ -45,7 +45,7 @@ function App() {
                         <BsFillEmojiLaughingFill />
                       </a>
                     </div>
-                    <div className="tooltip tooltip-left d-none d-md-block">
+                    <div className="tooltip tooltip-left d-none d-lg-block">
                       About
                     </div>
                   </div>
@@ -55,7 +55,7 @@ function App() {
                         <FaGraduationCap />
                       </a>
                     </div>
-                    <div className="tooltip tooltip-left d-none d-md-block">
+                    <div className="tooltip tooltip-left d-none d-lg-block">
                       Resume
                     </div>
                   </div>
@@ -65,7 +65,7 @@ function App() {
                         <FaCode />
                       </a>
                     </div>
-                    <div className="tooltip tooltip-left d-none d-md-block">
+                    <div className="tooltip tooltip-left d-none d-lg-block">
                       Projects
                     </div>
                   </div>
@@ -75,14 +75,14 @@ function App() {
                         <BiMessageRoundedDetail />
                       </a>
                     </div>
-                    <div className="tooltip tooltip-left d-none d-md-block">
+                    <div className="tooltip tooltip-left d-none d-lg-block">
                       Contact Me
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="content col-12 col-md-10">
+              <div className="content col-12 col-lg-10">
                 <section id="home">
                   <div className="d-flex flex-column align-items-center flex-lg-row align-items-lg-start w-100 h-100">
                     <div className="order-2 order-lg-1 d-flex flex-column align-items-center align-items-lg-start text-left home__content col-12 col-lg-7">
@@ -155,6 +155,7 @@ function App() {
               </svg>
             </div>
             {/* Waves end */}
+            <div className="lift-waves"></div>
           </div>
         </div>
       </div>
