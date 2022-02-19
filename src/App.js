@@ -1,9 +1,19 @@
+import React from "react";
 import "./App.css";
 import { FaHome, FaHamburger, FaGraduationCap, FaCode } from "react-icons/fa";
 import { BsFillEmojiLaughingFill } from "react-icons/bs";
 import { BiMessageRoundedDetail } from "react-icons/bi";
 import homeImage from "./assets/images/nikhil_icon-removebg-preview.png";
+// import Typewriter from "typewriter-effect";
+// import bgUtility from "./utilities/utilities";
+
 function App() {
+  // const printWindowWidth = () => {
+  //   var width = window.innerWidth > 0 ? window.innerWidth : "screen.width";
+  //   console.log(width);
+  // };
+  // printWindowWidth();
+
   return (
     <div className="App">
       <div className="container-fluid outer">
@@ -13,7 +23,7 @@ function App() {
             {/* Content before waves */}
             <div className="inner__container d-flex flex-column flex-lg-row mx-2 align-items-center">
               {/* icons left */}
-              <div className="wrapper d-flex flex-lg-column justify-content-start justify-content-lg-center align-self-start align-self-lg-center col-2 col-lg-1">
+              <div className="wrapper d-flex flex-lg-column justify-content-start justify-content-lg-center align-self-start align-self-lg-center col-12 col-lg-1">
                 <div className="d-lg-none menu_item facebook">
                   <div
                     className="icon"
@@ -21,8 +31,6 @@ function App() {
                       const menu_items = document.getElementById("menu_items");
                       menu_items.classList.toggle("d-none");
                       menu_items.classList.toggle("d-flex");
-                      console.log(menu_items);
-                      console.log("button clicked");
                     }}
                   >
                     <FaHamburger />
@@ -82,13 +90,59 @@ function App() {
                 </div>
               </div>
 
-              <div className="content col-12 col-lg-10">
+              <div className="content col-12 col-lg-11">
                 <section id="home">
-                  <div className="d-flex flex-column align-items-center flex-lg-row align-items-lg-start w-100 h-100">
-                    <div className="order-2 order-lg-1 d-flex flex-column align-items-center align-items-lg-start text-left home__content col-12 col-lg-7">
-                      <h1>Hi</h1>
-                      <h3>I am Nikhil Masigari</h3>
-                      <h4>Web developer |</h4>
+                  <div className="d-flex flex-column align-items-center flex-lg-row align-items-lg-start w-100 row">
+                    <div className="order-2 order-lg-1 d-flex flex-column align-items-center align-items-lg-start text-start home__content col-12 col-lg-7">
+                      <h1 className="hi">Hi, I am </h1>
+                      <svg
+                        className="name d-block"
+                        viewBox={
+                          window.innerWidth > 992
+                            ? "10 0 600 100"
+                            : "-5 0 600 70"
+                        }
+                      >
+                        <symbol id="s-text">
+                          <text textAnchor="middle" x="50%" y="80%">
+                            Nikhil Masigari
+                          </text>
+                        </symbol>
+
+                        <g className="g-ants">
+                          <use xlinkHref="#s-text" className="text-copy"></use>
+                          <use xlinkHref="#s-text" className="text-copy"></use>
+                          <use xlinkHref="#s-text" className="text-copy"></use>
+                          <use xlinkHref="#s-text" className="text-copy"></use>
+                          <use xlinkHref="#s-text" className="text-copy"></use>
+                        </g>
+                      </svg>
+                      <div
+                        id="container"
+                        className="text-center text-lg-start mt-3"
+                      >
+                        <p className="me-1">I am a </p>
+                        <div id="flip">
+                          <div>
+                            <div>Front-End Developer</div>
+                          </div>
+                          <div>
+                            <div>Flutter Developer</div>
+                          </div>
+                          <div>
+                            <div>App Developer</div>
+                          </div>
+                          <div>
+                            <div>Web Developer</div>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="mt-1 mt-lg-5 d-none d-lg-block order-3 col-12">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation.
+                      </p>
                     </div>
                     <div className="col-12 col-lg-5 mb-3 mb-lg-none order-1 order-lg-2 d-flex justify-content-center">
                       <div className="home__image rounded-circle">
@@ -115,8 +169,8 @@ function App() {
                 </section>
               </div>
             </div>
-            {/* Waves Container */}
-            <div style={{ zIndex: "1" }}>
+            ;{/* Waves Container */}
+            <div className="bottom_waves">
               <svg
                 className="waves"
                 xmlns="http://www.w3.org/2000/svg"
@@ -154,8 +208,8 @@ function App() {
                 </g>
               </svg>
             </div>
-            {/* Waves end */}
-            <div className="lift-waves"></div>
+            ;{/* Waves end */}
+            <div className="lift-waves"></div>;
           </div>
         </div>
       </div>
