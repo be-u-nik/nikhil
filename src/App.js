@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import { FaHome, FaHamburger, FaGraduationCap, FaCode } from "react-icons/fa";
-import { BsFillEmojiLaughingFill } from "react-icons/bs";
-import { BiMessageRoundedDetail } from "react-icons/bi";
-import homeImage from "./assets/images/nikhil_icon-removebg-preview.png";
+import "./App.scss";
+import "./Projects.scss";
+import "./Services.scss";
+import { FaHome, FaHamburger, FaCode, FaGraduationCap } from "react-icons/fa";
+import { BsFillEmojiLaughingFill, BsPersonFill } from "react-icons/bs";
+import { MdAlternateEmail, MdOutlineDesignServices } from "react-icons/md";
+import { IoMdTimer } from "react-icons/io";
+import homelgImage from "./assets/images/hi-lg-removebg-preview.png";
+import homeImage from "./assets/images/hi-removebg-preview.png";
 // import Typewriter from "typewriter-effect";
-// import bgUtility from "./utilities/utilities";
+import bgUtility from "./utilities/utilities";
+import about from "./utilities/aboutMe";
+
+import projects from "./utilities/projects";
 
 function App() {
   // const printWindowWidth = () => {
@@ -13,9 +21,26 @@ function App() {
   //   console.log(width);
   // };
   // printWindowWidth();
+  useEffect(() => {
+    function utilities() {
+      bgUtility();
+      about();
+      projects();
+      function printScrollDistance() {
+        // const content = document.querySelector(".content");
+        // content.addEventListener("wheel", (e) => {
+        //   console.log(e);
+        // });
+      }
+      printScrollDistance();
+    }
+    utilities();
+    return utilities;
+  }, []);
 
   return (
     <div className="App">
+      <canvas id="c"></canvas>
       <div className="container-fluid outer">
         <div className="row">
           <div className="col-12">
@@ -23,14 +48,15 @@ function App() {
             {/* Content before waves */}
             <div className="inner__container d-flex flex-column flex-lg-row mx-2 align-items-center">
               {/* icons left */}
-              <div className="wrapper d-flex flex-lg-column justify-content-start justify-content-lg-center align-self-start align-self-lg-center col-12 col-lg-1">
+              <div className="wrapper d-flex flex-column justify-content-start justify-content-lg-center align-self-start align-self-lg-center col-12 col-lg-1">
                 <div className="d-lg-none menu_item facebook">
                   <div
-                    className="icon"
+                    className="menu_icon"
                     onClick={() => {
                       const menu_items = document.getElementById("menu_items");
                       menu_items.classList.toggle("d-none");
                       menu_items.classList.toggle("d-flex");
+                      menu_items.classList.toggle("flex-column");
                     }}
                   >
                     <FaHamburger />
@@ -38,7 +64,7 @@ function App() {
                 </div>
                 <div className="d-none d-lg-block" id="menu_items">
                   <div className="menu_item facebook">
-                    <div className="icon">
+                    <div className="menu_icon">
                       <a href="#home" className="menu_item_icon">
                         <FaHome />
                       </a>
@@ -48,43 +74,44 @@ function App() {
                     </div>
                   </div>
                   <div className="menu_item twitter">
-                    <div className="icon">
-                      <a href="#about" className="menu_item_icon">
+                    <div className="menu_icon">
+                      <a href="#know_me" className="menu_item_icon">
                         <BsFillEmojiLaughingFill />
                       </a>
                     </div>
                     <div className="tooltip tooltip-left d-none d-lg-block">
-                      About
+                      KnowMe
                     </div>
                   </div>
-                  <div className="menu_item instagram">
-                    <div className="icon">
-                      <a href="#resume" className="menu_item_icon">
-                        <FaGraduationCap />
-                      </a>
-                    </div>
-                    <div className="tooltip tooltip-left d-none d-lg-block">
-                      Resume
-                    </div>
-                  </div>
+
                   <div className="menu_item github">
-                    <div className="icon">
-                      <a href="#projects" className="menu_item_icon">
+                    <div className="menu_icon">
+                      <a href="#work" className="menu_item_icon">
                         <FaCode />
                       </a>
                     </div>
                     <div className="tooltip tooltip-left d-none d-lg-block">
-                      Projects
+                      Work
                     </div>
                   </div>
-                  <div className="menu_item youtube">
-                    <div className="icon">
-                      <a href="#contact_me" className="menu_item_icon">
-                        <BiMessageRoundedDetail />
+                  <div className="menu_item instagram">
+                    <div className="menu_icon">
+                      <a href="#services" className="menu_item_icon">
+                        <MdOutlineDesignServices />
                       </a>
                     </div>
                     <div className="tooltip tooltip-left d-none d-lg-block">
-                      Contact Me
+                      Services
+                    </div>
+                  </div>
+                  <div className="menu_item youtube">
+                    <div className="menu_icon">
+                      <a href="#contact_me" className="menu_item_icon">
+                        <MdAlternateEmail />
+                      </a>
+                    </div>
+                    <div className="tooltip tooltip-left d-none d-lg-block">
+                      ContactMe
                     </div>
                   </div>
                 </div>
@@ -93,35 +120,13 @@ function App() {
               <div className="content col-12 col-lg-11">
                 <section id="home">
                   <div className="d-flex flex-column align-items-center flex-lg-row align-items-lg-start w-100 row">
-                    <div className="order-2 order-lg-1 d-flex flex-column align-items-center align-items-lg-start text-start home__content col-12 col-lg-7">
+                    <div className="order-2 d-flex flex-column align-items-center align-items-lg-start text-start home__content col-12 col-lg-7">
                       <h1 className="hi">Hi, I am </h1>
-                      <svg
-                        className="name d-block"
-                        viewBox={
-                          window.innerWidth > 992
-                            ? "10 0 600 100"
-                            : "-5 0 600 70"
-                        }
-                      >
-                        <symbol id="s-text">
-                          <text textAnchor="middle" x="50%" y="80%">
-                            Nikhil Masigari
-                          </text>
-                        </symbol>
-
-                        <g className="g-ants">
-                          <use xlinkHref="#s-text" className="text-copy"></use>
-                          <use xlinkHref="#s-text" className="text-copy"></use>
-                          <use xlinkHref="#s-text" className="text-copy"></use>
-                          <use xlinkHref="#s-text" className="text-copy"></use>
-                          <use xlinkHref="#s-text" className="text-copy"></use>
-                        </g>
-                      </svg>
+                      <div className="name">Nikhil Masigari</div>
                       <div
                         id="container"
                         className="text-center text-lg-start mt-3"
                       >
-                        <p className="me-1">I am a </p>
                         <div id="flip">
                           <div>
                             <div>Front-End Developer</div>
@@ -137,79 +142,289 @@ function App() {
                           </div>
                         </div>
                       </div>
-                      <p className="mt-1 mt-lg-5 d-none d-lg-block order-3 col-12">
+                    </div>
+                    <div className="col-12 col-lg-5 mb-3 mb-lg-none order-1 h-100 d-flex justify-content-center align-items-center justify-content-lg-end align-items-lg-end">
+                      <img
+                        src={window.innerWidth >= 992 ? homelgImage : homeImage}
+                        alt="nikhil"
+                        id="home__img"
+                      />
+                    </div>
+                  </div>
+                </section>
+                <section id="know_me" className="w-100">
+                  <h1 className="mb-1 mb-lg-3">Know Me</h1>
+                  <div className="d-flex justify-content-center mt-2 about__content text-start ps-2">
+                    <div className=" w-75">
+                      <div className="aboutMe">
+                        <div className="options d-flex flex-column flex-lg-row">
+                          <div className="option active">
+                            <div className="shadow"></div>
+                            <div className="label">
+                              <div className="icon">
+                                <BsPersonFill />
+                              </div>
+                              <div className="info">
+                                <div className="main">Who am I</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="option">
+                            <div className="shadow"></div>
+                            <div className="label">
+                              <div className="icon">
+                                <FaGraduationCap />
+                              </div>
+                              <div className="info">
+                                <div className="main">What I Know</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="option">
+                            <div className="shadow"></div>
+                            <div className="label">
+                              <div className="icon">
+                                <IoMdTimer />
+                              </div>
+                              <div className="info">
+                                <div className="main">Other Intrests</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/* <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation.
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
                       </p>
+                      <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium, totam rem
+                        aperiam, eaque ipsa quae ab illo inventore veritatis et
+                        quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                        enim ipsam voluptatem quia voluptas sit aspernatur aut
+                        odit aut fugit, sed quia consequuntur magni dolores eos
+                        qui ratione voluptatem sequi nesciunt. Neque porro
+                        quisquam est, qui dolorem ipsum quia dolor sit amet.
+                      </p> */}
                     </div>
-                    <div className="col-12 col-lg-5 mb-3 mb-lg-none order-1 order-lg-2 d-flex justify-content-center">
-                      <div className="home__image rounded-circle">
-                        <img
-                          src={homeImage}
-                          alt="nikhil"
-                          className="rounded-circle"
+                  </div>
+                </section>
+
+                <section id="work">
+                  <h1>My Work</h1>
+                  <div className="projects">
+                    <div className="projects_container">
+                      <div className="slider">
+                        <div className="box1 box">
+                          <div className="bg"></div>
+                          <div className="details text-center text-lg-start">
+                            <h1 className="project_title">Project Title</h1>
+                            <p className="project_description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Integer lacinia dui lectus. Donec
+                              scelerisque ipsum diam, ac mattis orci
+                              pellentesque eget.
+                            </p>
+                            <div className="d-flex justify-content-center justify-content-lg-start">
+                              <button className="me-2">Project Link</button>
+                              <button>Github Link</button>
+                            </div>
+                          </div>
+
+                          <div className="illustration">
+                            <div className="inner"></div>
+                          </div>
+                        </div>
+
+                        <div className="box2 box">
+                          <div className="bg"></div>
+                          <div className="details text-center text-lg-start">
+                            <h1 className="project_title">Project Title</h1>
+                            <p className="project_description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Integer lacinia dui lectus. Donec
+                              scelerisque ipsum diam, ac mattis orci
+                              pellentesque eget.
+                            </p>
+                            <div className="d-flex justify-content-center justify-content-lg-start">
+                              <button className="me-2">Project Link</button>
+                              <button>Github Link</button>
+                            </div>
+                          </div>
+
+                          <div className="illustration">
+                            <div className="inner"></div>
+                          </div>
+                        </div>
+
+                        <div className="box3 box">
+                          <div className="bg"></div>
+                          <div className="details text-center text-lg-start">
+                            <h1 className="project_title">Project Title</h1>
+                            <p className="project_description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Integer lacinia dui lectus. Donec
+                              scelerisque ipsum diam, ac mattis orci
+                              pellentesque eget.
+                            </p>
+                            <div className="d-flex justify-content-center justify-content-lg-start">
+                              <button className="me-2">Project Link</button>
+                              <button>Github Link</button>
+                            </div>
+                          </div>
+
+                          <div className="illustration">
+                            <div className="inner"></div>
+                          </div>
+                        </div>
+
+                        <div className="box4 box">
+                          <div className="bg"></div>
+                          <div className="details text-center text-lg-start">
+                            <h1 className="project_title">Project Title</h1>
+                            <p className="project_description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Integer lacinia dui lectus. Donec
+                              scelerisque ipsum diam, ac mattis orci
+                              pellentesque eget.
+                            </p>
+                            <div className="d-flex justify-content-center justify-content-lg-start">
+                              <button className="me-2">Project Link</button>
+                              <button>Github Link</button>
+                            </div>
+                          </div>
+
+                          <div className="illustration">
+                            <div className="inner"></div>
+                          </div>
+                        </div>
+
+                        <div className="box5 box">
+                          <div className="bg"></div>
+                          <div className="details text-center text-lg-start">
+                            <h1 className="project_title">Project Title</h1>
+                            <p className="project_description">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Integer lacinia dui lectus. Donec
+                              scelerisque ipsum diam, ac mattis orci
+                              pellentesque eget.
+                            </p>
+                            <div className="d-flex justify-content-center justify-content-lg-start">
+                              <button className="me-2">Project Link</button>
+                              <button>Github Link</button>
+                            </div>
+                          </div>
+
+                          <div className="illustration">
+                            <div className="inner"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="prev"
+                        width="56.898"
+                        height="91"
+                        viewBox="0 0 56.898 91"
+                      >
+                        <path
+                          d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z"
+                          transform="translate(0 91) rotate(-90)"
+                          fill="#fff"
                         />
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="next"
+                        width="56.898"
+                        height="91"
+                        viewBox="0 0 56.898 91"
+                      >
+                        <path
+                          d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z"
+                          transform="translate(56.898) rotate(90)"
+                          fill="#fff"
+                        />
+                      </svg>
+                      <div className="trail">
+                        <div className="box1 active trail_div">1</div>
+                        <div className="box2 trail_div">2</div>
+                        <div className="box3 trail_div">3</div>
+                        <div className="box4 trail_div">4</div>
+                        <div className="box5 trail_div">5</div>
                       </div>
                     </div>
                   </div>
                 </section>
-                <section id="about">
-                  <h1>About</h1>
-                </section>
-                <section id="resume">
-                  <h1>Resume</h1>
-                </section>
-                <section id="projects">
-                  <h1>Projects</h1>
+                <section id="services">
+                  <h1>Services</h1>
+                  <div className="services_container row">
+                    <div className="flip flip-vertical col-12 col-md-6">
+                      <div className="front">
+                        <h1 className="heading-front">Web Design</h1>
+                      </div>
+                      <div className="back">
+                        <p>
+                          Good tools make application development quicker and
+                          easier to maintain than if you did everything by
+                          hand..
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flip flip-vertical col-12 col-md-6">
+                      <div className="front">
+                        <h1 className="heading-front">Web Developement</h1>
+                      </div>
+                      <div className="back">
+                        <p>
+                          Good tools make application development quicker and
+                          easier to maintain than if you did everything by
+                          hand..
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flip flip-vertical col-12 col-md-6">
+                      <div className="front">
+                        <h1 className="heading-front">App Design</h1>
+                      </div>
+                      <div className="back">
+                        <p>
+                          Good tools make application development quicker and
+                          easier to maintain than if you did everything by
+                          hand..
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flip flip-vertical col-12 col-md-6">
+                      <div className="front">
+                        <h1 className="heading-front">App Developement</h1>
+                      </div>
+                      <div className="back">
+                        <p>
+                          Good tools make application development quicker and
+                          easier to maintain than if you did everything by
+                          hand..
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <h1>Tech Stack</h1>
+                  <div className="tech_stack_container"></div>
                 </section>
                 <section id="contact_me">
                   <h1>Contact me</h1>
                 </section>
               </div>
             </div>
-            ;{/* Waves Container */}
-            <div className="bottom_waves">
-              <svg
-                className="waves"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28"
-                preserveAspectRatio="none"
-                shapeRendering="auto"
-              >
-                <defs>
-                  <path
-                    id="gentle-wave"
-                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-                  />
-                </defs>
-                <g className="parallax">
-                  <use
-                    xlinkHref="#gentle-wave"
-                    x="48"
-                    y="0"
-                    fill="rgba(255,255,255,0.7"
-                  />
-                  <use
-                    xlinkHref="#gentle-wave"
-                    x="48"
-                    y="3"
-                    fill="rgba(255,255,255,0.5)"
-                  />
-                  <use
-                    xlinkHref="#gentle-wave"
-                    x="48"
-                    y="5"
-                    fill="rgba(255,255,255,0.3)"
-                  />
-                  <use xlinkHref="#gentle-wave" x="48" y="7" fill="#fff" />
-                </g>
-              </svg>
-            </div>
-            ;{/* Waves end */}
-            <div className="lift-waves"></div>;
           </div>
         </div>
       </div>
