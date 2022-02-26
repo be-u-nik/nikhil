@@ -8,7 +8,10 @@
 }
 
 .heading-front {
-  font-size: 2.2em;
+  font-size: 2em;
+  @media screen and (max-width: 576px) {
+    font-size: 1em;
+  }
 }
 
 // base

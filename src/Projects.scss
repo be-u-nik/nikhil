@@ -21,7 +21,6 @@ $white: #fff;
       filter: opacity(5%);
     }
     &::after {
-      background-image: url("https://bs-uploads.toptal.io/blackfish-uploads/uploaded_file/file/407511/image-1602273747536-ba7e3c5b0573237b0600df160ff31dcc.jpg");
       background-size: cover;
       background-position: center;
     }
@@ -193,7 +192,7 @@ $white: #fff;
   .illustration {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
-    justify-self: start;
+    justify-self: center;
 
     @media only screen and (max-width: 992px) {
       grid-row: 1 / span 1;
@@ -201,7 +200,6 @@ $white: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      justify-self: center;
     }
 
     .inner {

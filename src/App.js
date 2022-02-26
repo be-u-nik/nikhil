@@ -9,6 +9,14 @@ import { MdAlternateEmail, MdOutlineDesignServices } from "react-icons/md";
 import { IoMdTimer } from "react-icons/io";
 import homelgImage from "./assets/images/hi-lg-removebg-preview.png";
 import homeImage from "./assets/images/hi-removebg-preview.png";
+import htmlLogo from "./assets/backgrounds/html-5.png";
+import cssLogo from "./assets/backgrounds/css-3.png";
+import jsLogo from "./assets/backgrounds/js.png";
+import reactjsLogo from "./assets/backgrounds/structure.png";
+import nodejsLogo from "./assets/backgrounds/nodejs.png";
+import sqliteLogo from "./assets/backgrounds/sqlite.png";
+import flutterLogo from "./assets/backgrounds/flutter.png";
+import djangoLogo from "./assets/backgrounds/django.png";
 // import Typewriter from "typewriter-effect";
 import bgUtility from "./utilities/utilities";
 import about from "./utilities/aboutMe";
@@ -44,9 +52,7 @@ function App() {
       <div className="container-fluid outer">
         <div className="row">
           <div className="col-12">
-            {/* waves */}
-            {/* Content before waves */}
-            <div className="inner__container d-flex flex-column flex-lg-row mx-2 align-items-center">
+            <div className="inner__container d-flex flex-column flex-lg-row mx-sm-1 mx-md-2 align-items-center">
               {/* icons left */}
               <div className="wrapper d-flex flex-column justify-content-start justify-content-lg-center align-self-start align-self-lg-center col-12 col-lg-1">
                 <div className="d-lg-none menu_item facebook">
@@ -155,7 +161,7 @@ function App() {
                 <section id="know_me" className="w-100">
                   <h1 className="mb-1 mb-lg-3">Know Me</h1>
                   <div className="d-flex justify-content-center mt-2 about__content text-start ps-2">
-                    <div className=" w-75">
+                    <div className=" w-100">
                       <div className="aboutMe">
                         <div className="options d-flex flex-column flex-lg-row">
                           <div className="option active">
@@ -368,7 +374,7 @@ function App() {
                 <section id="services">
                   <h1>Services</h1>
                   <div className="services_container row">
-                    <div className="flip flip-vertical col-12 col-md-6">
+                    <div className="flip flip-vertical col-6">
                       <div className="front">
                         <h1 className="heading-front">Web Design</h1>
                       </div>
@@ -380,7 +386,7 @@ function App() {
                         </p>
                       </div>
                     </div>
-                    <div className="flip flip-vertical col-12 col-md-6">
+                    <div className="flip flip-vertical col-6">
                       <div className="front">
                         <h1 className="heading-front">Web Developement</h1>
                       </div>
@@ -392,7 +398,7 @@ function App() {
                         </p>
                       </div>
                     </div>
-                    <div className="flip flip-vertical col-12 col-md-6">
+                    <div className="flip flip-vertical col-6">
                       <div className="front">
                         <h1 className="heading-front">App Design</h1>
                       </div>
@@ -404,7 +410,7 @@ function App() {
                         </p>
                       </div>
                     </div>
-                    <div className="flip flip-vertical col-12 col-md-6">
+                    <div className="flip flip-vertical col-6">
                       <div className="front">
                         <h1 className="heading-front">App Developement</h1>
                       </div>
@@ -418,10 +424,76 @@ function App() {
                     </div>
                   </div>
                   <h1>Tech Stack</h1>
-                  <div className="tech_stack_container"></div>
+                  <div className="tech_stack_container">
+                    <div className="tech_cards-list">
+                      <div className="tech_card 1">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={htmlLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="tech_card 2">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={cssLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="tech_card 3">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={jsLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="tech_card 4">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={reactjsLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="tech_card 5">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={nodejsLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="tech_card 6">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={flutterLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="tech_card 7">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={djangoLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="tech_card 8">
+                        <div className="tech_card_image d-flex align-items-center">
+                          <div className="p-2 tech_image">
+                            <img src={sqliteLogo} alt="htmlLogo" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </section>
                 <section id="contact_me">
                   <h1>Contact me</h1>
+                  <div className="row">
+                    <div className="col-12 col-lg-5 order-2 order-lg-1"></div>
+                    <div className="col-12 col-lg-5 order-2 order-lg-1"></div>
+                  </div>
                 </section>
               </div>
             </div>

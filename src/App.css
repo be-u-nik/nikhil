@@ -32,7 +32,7 @@ canvas {
 }
 
 .wrapper {
-  margin-top: 7vh;
+  margin-top: 5vh;
   position: absolute;
   top: 1vh;
   left: 1vw;
@@ -218,18 +218,18 @@ section {
   background: transparent;
   /* border: 1px dashed #ffffff; */
 }
+#know_me {
+  padding-top: 5vh;
+}
+#work {
+  padding-top: 5vh;
+}
+#services {
+  padding-top: 5vh;
+}
 @media (min-width: 992px) {
   #home {
     padding-top: 10vh;
-  }
-  #know_me {
-    padding-top: 5vh;
-  }
-  #work {
-    padding-top: 5vh;
-  }
-  #services {
-    padding-top: 5vh;
   }
 }
 
@@ -266,7 +266,7 @@ section {
 @media (max-width: 576px) {
   .name {
     display: block;
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0 auto;
   }
 }
@@ -384,3 +384,67 @@ section {
   }
 }
 /* projects ends*/
+
+/* tech stack */
+.tech_cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media all and (max-width: 320px) {
+  .tech_cards-list {
+    justify-content: space-around;
+  }
+}
+
+.tech_card {
+  margin: 0px 20px 30px;
+  height: 100%;
+  border-radius: 16px;
+  /* box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22); */
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.tech_card .tech_card_image {
+  width: inherit;
+  height: inherit;
+}
+
+.tech_card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+.tech_image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.tech_image img {
+  height: 100px;
+}
+@media all and (max-width: 992px) {
+  .tech_image img {
+    height: 50px;
+  }
+}
+@media all and (max-width: 500px) {
+  .tech_cards-list {
+    /* On small screens, we are no longer using row direction but column */
+    /* flex-direction: column; */
+    width: 100%;
+  }
+
+  .tech_card {
+    margin: 0px 20px 20px;
+  }
+}
+/* tech stack ends */
