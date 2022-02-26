@@ -15,7 +15,7 @@ import jsLogo from "./assets/backgrounds/js.png";
 import reactjsLogo from "./assets/backgrounds/structure.png";
 import nodejsLogo from "./assets/backgrounds/nodejs.png";
 import sqliteLogo from "./assets/backgrounds/sqlite.png";
-import flutterLogo from "./assets/backgrounds/flutter.png";
+import flutterLogo from "./assets/backgrounds/flutterlogo.png";
 import djangoLogo from "./assets/backgrounds/django.png";
 // import Typewriter from "typewriter-effect";
 import bgUtility from "./utilities/utilities";
