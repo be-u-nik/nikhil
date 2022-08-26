@@ -188,9 +188,10 @@ canvas {
 /* slides */
 
 .content {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
+  margin-bottom: 5vh;
   display: block;
-  height: 90vh;
+  height: 80vh;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

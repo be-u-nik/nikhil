@@ -31,7 +31,7 @@ function App() {
   // printWindowWidth();
   useEffect(() => {
     function utilities() {
-      bgUtility();
+      // bgUtility();
       about();
       projects();
       function printScrollDistance() {
@@ -48,8 +48,8 @@ function App() {
 
   return (
     <div className="App">
-      <canvas id="c"></canvas>
-      <div className="container-fluid outer">
+      {/* <canvas id="c"></canvas> */}
+      <div className="container-fluid outer bg-dark">
         <div className="row">
           <div className="col-12">
             <div className="inner__container d-flex flex-column flex-lg-row mx-sm-1 mx-md-2 align-items-center">
@@ -135,7 +135,7 @@ function App() {
                       >
                         <div id="flip">
                           <div>
-                            <div>Front-End Developer</div>
+                            <div>Full-Stack Developer</div>
                           </div>
                           <div>
                             <div>Flutter Developer</div>
@@ -372,7 +372,7 @@ function App() {
                   </div>
                 </section>
                 <section id="services">
-                  <h1>Services</h1>
+                  <h1>Let's talk Work</h1>
                   <div className="services_container row">
                     <div className="flip flip-vertical col-6">
                       <div className="front">
